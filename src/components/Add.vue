@@ -1,23 +1,17 @@
 <template>
   <Navbar></Navbar>
-  <h1>{{ name }}</h1>
+  <h1>Add Page</h1>
 </template>
 <script>
 import Navbar from "./Navbar.vue";
 export default {
-  name: "MyHome",
-  data() {
-    return {
-      name: "",
-    };
-  },
+  name: "AddRestaurant",
   components: {
     Navbar,
   },
 
   mounted() {
     let user = localStorage.getItem("User-Info");
-    this.name = JSON.parse(user).name;
     if (!user) {
       this.$router.push({ name: "SignUp" });
     }
