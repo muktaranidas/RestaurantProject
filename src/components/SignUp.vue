@@ -1,6 +1,6 @@
 <template>
   <img class="signup-logo" src="../assets/signup.jpg" alt="" />
-  <h1>Sign Up</h1>
+  <h1 class="signup">Sign Up</h1>
   <div class="register">
     <input type="text" v-model="name" placeholder="Enter Name" />
     <input type="email" v-model="email" placeholder="Enter Email" />
@@ -46,4 +46,8 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.signup {
+  color: blueviolet;
+}
+</style>
