@@ -1,14 +1,16 @@
 <template>
-  <img class="signup-logo" src="../assets/signup.jpg" alt="" />
-  <h1>Login</h1>
-  <div class="login">
-    <input type="email" v-model="email" placeholder="Enter Email" />
-    <input type="password" v-model="password" placeholder="Enter Password" />
-    <button v-on:click="login">Login</button>
-    <p>
-      New to Restaurant App? please
-      <router-link to="/signup"> SignUp</router-link>
-    </p>
+  <div class="login-parent-div">
+    <img class="signup-logo" src="../assets/signup.jpg" alt="" />
+    <div class="login">
+      <h1 class="login-heading">Login</h1>
+      <input type="email" v-model="email" placeholder="Enter Email" />
+      <input type="password" v-model="password" placeholder="Enter Password" />
+      <button v-on:click="login">Login</button>
+      <p>
+        New to Restaurant App? please
+        <router-link to="/signup" class="link-signup"> SignUp</router-link>
+      </p>
+    </div>
   </div>
 </template>
 <script>
@@ -41,3 +43,9 @@ export default {
   },
 };
 </script>
+<style>
+.login-heading,
+.link-signup {
+  color: blueviolet;
+}
+</style>

@@ -1,26 +1,27 @@
 <template>
   <Navbar></Navbar>
   <h1>Hello {{ name }}, This is Home Page</h1>
-  <h1 class="text-5xl bg-red-600">Hi this is muko</h1>
-  <table border="1">
-    <tr>
-      <td>Id</td>
-      <td>Name</td>
-      <td>Contact</td>
-      <td>Address</td>
-      <td>Actions</td>
-    </tr>
-    <tr v-for="item in restaurant" :key="item.id">
-      <td>{{ item.id }}</td>
-      <td>{{ item.name }}</td>
-      <td>{{ item.contact }}</td>
-      <td>{{ item.address }}</td>
-      <td>
-        <router-link :to="'/update/' + item.id">Update</router-link>
-        <button v-on:click="deleteRestaurant(item.id)">Delete</button>
-      </td>
-    </tr>
-  </table>
+  <div class="table">
+    <table border="1" class="table">
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Contact</td>
+        <td>Address</td>
+        <td>Actions</td>
+      </tr>
+      <tr v-for="item in restaurant" :key="item.id">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.contact }}</td>
+        <td>{{ item.address }}</td>
+        <td>
+          <router-link :to="'/update/' + item.id">Update</router-link>
+          <button v-on:click="deleteRestaurant(item.id)">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
 </template>
 <script>
 import Navbar from "./Navbar.vue";
@@ -64,6 +65,9 @@ export default {
 };
 </script>
 <style>
+table {
+  margin-left: 500px;
+}
 td {
   width: 160px;
   height: 40px;

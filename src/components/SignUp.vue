@@ -1,15 +1,17 @@
 <template>
-  <img class="signup-logo" src="../assets/signup.jpg" alt="" />
-  <h1 class="signup">Sign Up</h1>
-  <div class="register">
-    <input type="text" v-model="name" placeholder="Enter Name" />
-    <input type="email" v-model="email" placeholder="Enter Email" />
-    <input type="password" v-model="password" placeholder="Enter Password" />
-    <button v-on:click="signup">Sign Up</button>
-    <p>
-      Already have a account? Please
-      <router-link to="/login"> Login</router-link>
-    </p>
+  <div class="signup-parent-div">
+    <img class="signup-logo" src="../assets/signup.jpg" alt="" />
+    <div class="register">
+      <h1 class="signup-heading">Sign Up</h1>
+      <input type="text" v-model="name" placeholder="Enter Name" />
+      <input type="email" v-model="email" placeholder="Enter Email" />
+      <input type="password" v-model="password" placeholder="Enter Password" />
+      <button v-on:click="signup">Sign Up</button>
+      <p>
+        Already have a account? Please
+        <router-link to="/login" class="link-login"> Login</router-link>
+      </p>
+    </div>
   </div>
 </template>
 <script>
@@ -47,7 +49,8 @@ export default {
 };
 </script>
 <style>
-.signup {
+.signup-heading,
+.link-login {
   color: blueviolet;
 }
 </style>

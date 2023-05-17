@@ -18,14 +18,24 @@ body {
   padding: 0;
   margin: 0;
 }
+.signup-parent-div,
+.login-parent-div {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
 
 .signup-logo {
-  width: 100px;
+  width: 600px;
+  height: 400px;
+  margin-top: 20px;
 }
 .register input,
 .login input,
 .add input {
-  width: 300px;
+  width: 400px;
   height: 40px;
   padding-left: 20px;
   display: block;
