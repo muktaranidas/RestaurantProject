@@ -8,7 +8,7 @@
       <input type="password" v-model="password" placeholder="Enter Password" />
       <button v-on:click="signup">Sign Up</button>
       <p>
-        Already have a account? Please
+        Already Have a Account? Please
         <router-link to="/login" class="link-login"> Login</router-link>
       </p>
     </div>
